@@ -21,6 +21,7 @@ app.use(_express.default.urlencoded({
 app.use(_express.default.static('public'));
 // habilitando rutas
 app.use('/api', _index.Route);
-app.listen(3000, () => {
+const IP_ADDRESS = 'https://competitiveprogramming.onrender.com/';
+app.listen(3000, IP_ADDRESS, () => {
   console.log("servidor corriendo****");
 });

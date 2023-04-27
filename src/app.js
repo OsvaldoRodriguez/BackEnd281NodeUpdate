@@ -18,10 +18,8 @@ app.use(express.static('public'));
 // habilitando rutas
 app.use('/api', Route);
 
-
-app.listen(3000, () => {
+const IP_ADDRESS = 'https://competitiveprogramming.onrender.com/'
+app.listen(3000, IP_ADDRESS, () => {
   console.log("servidor corriendo****");
-
 });
-
 
