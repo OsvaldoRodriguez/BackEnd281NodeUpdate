@@ -14,9 +14,9 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database281sr",
+    "username": "bd_sa_user",
+    "password": "9nYY3wbOt4I8HNW5Kihv4WitjbC8CtcF",
+    "database": "bd_sistemas_academicos_postgres",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
