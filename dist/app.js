@@ -21,7 +21,7 @@ app.use(_express.default.urlencoded({
 app.use(_express.default.static('public'));
 // habilitando rutas
 app.use('/api', _index.Route);
-const IP_ADDRESS = 'https://competitiveprogramming.onrender.com/';
-app.listen(3000, IP_ADDRESS, () => {
-  console.log("servidor corriendo****");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`servidor corriendo**** en puerto ${POST}`);
 });

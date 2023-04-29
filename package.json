@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node src/app.js",
-    "built": "babel src/ --out-dir dist",
+    "build": "babel src/ --out-dir dist && xcopy /s/y src\\config dist\\config",
+    "migrate" : "npx sequelize-cli db:migrate",
     "start": "node dist/app.js"
   },
   "engines": {
