@@ -77,7 +77,7 @@ Route.post('/infosistema/:id/actualizar-imagen', upload.single("imagen"), _infor
 
 // creando los endpoints (rutas)
 Route.get('/persona', _persona.default.mostrar);
-Route.post('/persona', authMiddleware.auth, _persona.default.guardar);
+Route.post('/persona', _persona.default.guardar);
 Route.get('/persona/:id', _persona.default.mostrarId);
 Route.put('/persona/:id', authMiddleware.auth, _persona.default.actualizar);
 Route.delete('/persona/:id', authMiddleware.auth, _persona.default.eliminar);
@@ -85,7 +85,7 @@ Route.delete('/persona/:id', authMiddleware.auth, _persona.default.eliminar);
 // para usuario
 Route.get('/usuario', _usuario.default.mostrar);
 Route.get('/usuario-persona', authMiddleware.auth, _usuario.default.mostrarConPersonaYBol);
-Route.post('/usuario', authMiddleware.auth, _usuario.default.guardar);
+Route.post('/usuario', _usuario.default.guardar);
 Route.get('/usuario/:id', _usuario.default.mostrarId);
 Route.put('/usuario/:id', authMiddleware.auth, _usuario.default.actualizar);
 Route.delete('/usuario/:id', authMiddleware.auth, _usuario.default.eliminar);
@@ -96,14 +96,14 @@ Route.post('/usuario/:id/actualizar-imagen', upload.single("imagen"), _usuario.d
 
 //Rol
 Route.get('/rol', _rol.default.mostrar);
-Route.post('/rol', authMiddleware.auth, _rol.default.guardar);
+Route.post('/rol', _rol.default.guardar);
 Route.get('/rol/:id', _rol.default.mostrarId);
 Route.put('/rol/:id', authMiddleware.auth, _rol.default.actualizar);
 Route.delete('/rol/:id', authMiddleware.auth, _rol.default.eliminar);
 
 //Usuario_Tiene_Rol
 Route.get('/usuario_tiene_rol', authMiddleware.auth, _usuarioTieneRol.default.mostrar);
-Route.post('/usuario_tiene_rol', authMiddleware.auth, _usuarioTieneRol.default.guardar);
+Route.post('/usuario_tiene_rol', _usuarioTieneRol.default.guardar);
 Route.get('/usuario_tiene_rol/:id', authMiddleware.auth, _usuarioTieneRol.default.mostrarId);
 Route.put('/usuario_tiene_rol/:id', authMiddleware.auth, _usuarioTieneRol.default.actualizar);
 Route.delete('/usuario_tiene_rol/:id', authMiddleware.auth, _usuarioTieneRol.default.eliminar);
@@ -155,7 +155,7 @@ Route.get('/ambiente/:id', authMiddleware.auth, _ambiente.default.mostrarId);
 Route.put('/ambiente/:id', authMiddleware.auth, _ambiente.default.actualizar);
 Route.delete('/ambiente/:id', authMiddleware.auth, _ambiente.default.eliminar);
 Route.get('/categoria', authMiddleware.auth, _categoria.default.mostrar);
-Route.post('/categoria', authMiddleware.auth, _categoria.default.guardar);
+Route.post('/categoria', _categoria.default.guardar);
 Route.get('/categoria/:id', authMiddleware.auth, _categoria.default.mostrarId);
 Route.put('/categoria/:id', authMiddleware.auth, _categoria.default.actualizar);
 Route.delete('/categoria/:id', authMiddleware.auth, _categoria.default.eliminar);
