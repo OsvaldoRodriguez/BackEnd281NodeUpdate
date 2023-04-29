@@ -20,6 +20,6 @@ app.use('/api', Route);
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
-  console.log(`servidor corriendo**** en puerto ${POST}`);
+  console.log(`servidor corriendo**** en puerto ${PORT}`);
 });
 
