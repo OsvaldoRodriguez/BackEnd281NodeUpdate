@@ -6,7 +6,9 @@ var _cors = _interopRequireDefault(require("cors"));
 var _bodyParser = _interopRequireDefault(require("body-parser"));
 var _bcrypt = require("bcrypt");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var history = require('connect-history-api-fallback');
 const app = (0, _express.default)();
+app.use(history());
 app.use(_bodyParser.default.json());
 app.use(_bodyParser.default.urlencoded({
   extended: true

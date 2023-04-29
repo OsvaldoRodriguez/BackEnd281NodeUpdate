@@ -3,9 +3,12 @@ import { Route } from "./routes/index";
 import cors from "cors";
 import bodyParser from "body-parser";
 import {bcrypt} from 'bcrypt'
+var history = require('connect-history-api-fallback')
+
 const app = express();
 
 
+app.use(history());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
